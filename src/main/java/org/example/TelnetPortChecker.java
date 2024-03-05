@@ -1,5 +1,4 @@
 package org.example;
-
 import org.apache.commons.net.telnet.TelnetClient;
 import java.io.IOException;
 import java.util.Scanner;
@@ -24,7 +23,7 @@ public class TelnetPortChecker {
     public static String checkPort(String target, int port) {
         try {
             TelnetClient client = new TelnetClient();
-            client.setConnectTimeout(2);
+            client.setConnectTimeout(1000);
             client.connect(target, port);
 
             client.disconnect();
